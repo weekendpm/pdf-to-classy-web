@@ -35,7 +35,7 @@ const HeroSection = ({ onOpenForm }: { onOpenForm: () => void }) => {
         }`}
       >
         <p className="mb-6 font-lato text-xs uppercase tracking-[0.4em] text-champagne/70 md:mb-8">
-          Luxury Indian Bridal Styling
+          Luxury Indian Cultural Styling
         </p>
 
         <h1 className="font-cormorant text-4xl font-light leading-[1.05] text-parchment sm:text-5xl md:text-7xl lg:text-[96px]">
