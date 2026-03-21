@@ -38,7 +38,9 @@ const LeadFormDialog = ({ open, onOpenChange }: LeadFormDialogProps) => {
   const [vision, setVision] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbxKPPIUZeblM0BRcJDYD-jRkfmavKSSf7qvaJ7NwHXw7t53BiJJ4S65bezz3VvMtq2t/exec";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !phone) return;
 
@@ -55,25 +57,30 @@ const LeadFormDialog = ({ open, onOpenChange }: LeadFormDialogProps) => {
       submittedAt: new Date().toISOString(),
     };
 
-    const existing = JSON.parse(localStorage.getItem("ruhi_leads") || "[]");
-    existing.push(lead);
-    localStorage.setItem("ruhi_leads", JSON.stringify(existing));
-
-    setTimeout(() => {
-      setSubmitting(false);
-      onOpenChange(false);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setWeddingDate(undefined);
-      setBudget("");
-      setEvents("");
-      setVision("");
-      toast({
-        title: "Welcome to Ruhi ✨",
-        description: "We'll be in touch within 24 hours to begin your journey.",
+    try {
+      await fetch(SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(lead),
       });
-    }, 600);
+    } catch (err) {
+      console.error("Failed to submit lead:", err);
+    }
+
+    setSubmitting(false);
+    onOpenChange(false);
+    setName("");
+    setEmail("");
+    setPhone("");
+    setWeddingDate(undefined);
+    setBudget("");
+    setEvents("");
+    setVision("");
+    toast({
+      title: "Welcome to Ruhi ✨",
+      description: "We'll be in touch within 24 hours to begin your journey.",
+    });
   };
 
   const inputClass =
