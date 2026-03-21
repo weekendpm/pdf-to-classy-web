@@ -47,6 +47,16 @@ const CollaborateSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Editorial image */}
+        <div className="mt-12 overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}images/image-3-5.jpg`}
+            alt="Indian wedding couple"
+            className="w-full object-cover object-center"
+            style={{ maxHeight: "400px" }}
+          />
+        </div>
       </div>
     </section>
   );

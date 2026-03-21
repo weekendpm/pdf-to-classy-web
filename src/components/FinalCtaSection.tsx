@@ -8,7 +8,7 @@ const FinalCtaSection = ({
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="bg-maroon py-24 md:py-32">
+    <section style={{ backgroundColor: "hsl(0 30% 14%)" }} className="py-24 md:py-32">
       <div
         ref={ref}
         className={`mx-auto max-w-3xl px-6 text-center transition-all duration-700 ${

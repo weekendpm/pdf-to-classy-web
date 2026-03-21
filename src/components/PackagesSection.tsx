@@ -26,6 +26,26 @@ const PackagesSection = () => {
           <span className="italic">रूही</span> Packages
         </h2>
 
+        {/* Client result images — two side by side */}
+        <div className="mb-12 grid grid-cols-2 gap-3 md:gap-4">
+          <div className="overflow-hidden">
+            <img
+              src={`${import.meta.env.BASE_URL}images/image-4-4.jpg`}
+              alt="Ruhi client in styled bridal look"
+              className="w-full object-cover object-top"
+              style={{ maxHeight: "380px" }}
+            />
+          </div>
+          <div className="overflow-hidden">
+            <img
+              src={`${import.meta.env.BASE_URL}images/image-4-5.png`}
+              alt="Ruhi client in styled bridal look"
+              className="w-full object-cover object-top"
+              style={{ maxHeight: "380px" }}
+            />
+          </div>
+        </div>
+
         {/* Table header */}
         <div className="hidden border-b border-champagne/30 pb-3 md:grid md:grid-cols-3 md:gap-4">
           <span className="font-lato text-xs uppercase tracking-[0.2em] text-champagne/50">

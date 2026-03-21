@@ -36,6 +36,46 @@ const MeetRuhiSection = () => {
           Meet <span className="italic">रूही</span>
         </h2>
 
+        <div className="mb-16 grid gap-8 md:grid-cols-3 md:gap-6 items-start">
+          {/* Ruhi portrait — tall */}
+          <div className="overflow-hidden md:col-span-1">
+            <img
+              src={`${import.meta.env.BASE_URL}images/image-5-1.jpg`}
+              alt="Ruhi — luxury Indian bridal stylist"
+              className="w-full object-cover object-top"
+              style={{ maxHeight: "560px" }}
+            />
+          </div>
+          {/* Bride portrait — tall */}
+          <div className="overflow-hidden md:col-span-1">
+            <img
+              src={`${import.meta.env.BASE_URL}images/image-4-2.jpg`}
+              alt="Styled Indian bride"
+              className="w-full object-cover object-top"
+              style={{ maxHeight: "560px" }}
+            />
+          </div>
+          {/* Stylist detail — stacked two smaller */}
+          <div className="flex flex-col gap-4 md:col-span-1">
+            <div className="overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/image-5-2.jpeg`}
+                alt="Ruhi styling a bride"
+                className="w-full object-cover object-top"
+                style={{ maxHeight: "270px" }}
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/image-4-3.jpg`}
+                alt="Bridal styling detail"
+                className="w-full object-cover object-center"
+                style={{ maxHeight: "270px" }}
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {pillars.map((p, i) => (
             <div

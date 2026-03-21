@@ -16,16 +16,32 @@ const ProblemSection = () => {
         </p>
 
         <div className="grid gap-12 md:grid-cols-5 md:gap-16">
-          {/* Left — stat */}
+          {/* Left — stat + couple image */}
           <div className="md:col-span-2">
             <h2 className="font-cormorant text-5xl font-light italic leading-tight text-maroon md:text-6xl lg:text-7xl">
               2.8 million
               <br />
               <span className="not-italic font-normal text-4xl md:text-5xl">
-                Indian brides
+                Indian weddings
               </span>
             </h2>
             <p className="mt-4 font-lato text-sm text-maroon/50">Every year</p>
+            <div className="mt-8 overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/image-3-5.jpg`}
+                alt="Happy Indian wedding couple"
+                className="w-full object-cover object-center"
+                style={{ maxHeight: "260px" }}
+              />
+            </div>
+            <div className="mt-3 overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/image-3-6.png`}
+                alt="Indian bridal styling detail"
+                className="w-full object-cover object-center"
+                style={{ maxHeight: "180px" }}
+              />
+            </div>
           </div>
 
           {/* Right — copy */}
@@ -48,6 +64,34 @@ const ProblemSection = () => {
             <p className="font-dm-serif text-xl text-maroon md:text-2xl">
               This is the moment Ruhi is built for.
             </p>
+
+            {/* Bridal detail strip */}
+            <div className="grid grid-cols-3 gap-2 pt-2">
+              <div className="overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/image-3-1.png`}
+                  alt="Indian bridal detail"
+                  className="w-full object-cover object-center"
+                  style={{ maxHeight: "200px" }}
+                />
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/image-3-2.png`}
+                  alt="Indian bridal jewellery detail"
+                  className="w-full object-cover object-center"
+                  style={{ maxHeight: "200px" }}
+                />
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/image-3-3.png`}
+                  alt="Indian bridal outfit detail"
+                  className="w-full object-cover object-center"
+                  style={{ maxHeight: "200px" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
