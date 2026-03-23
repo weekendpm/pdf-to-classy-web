@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/pdf-to-classy-web/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
