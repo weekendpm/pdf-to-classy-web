@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // Redirect to index with the path encoded as a query param
-      var path = window.location.pathname.replace('/pdf-to-classy-web', '') || '/';
-      window.location.replace(
-        '/pdf-to-classy-web/?p=' + encodeURIComponent(path)
-      );
+      var path = window.location.pathname || '/';
+      window.location.replace('/?p=' + encodeURIComponent(path));
     </script>
   </head>
   <body></body>
