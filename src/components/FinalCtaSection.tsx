@@ -30,7 +30,7 @@ const FinalCtaSection = ({
             onClick={onOpenBrideForm}
             className="w-full bg-champagne px-8 py-3 font-lato text-xs uppercase tracking-[0.25em] text-charcoal transition-all duration-200 hover:bg-champagne/90 active:scale-[0.97] sm:w-auto"
           >
-            I'm a Bride
+            I want to be styled
           </button>
           <a
             href="#collaborate"
